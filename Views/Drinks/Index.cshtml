@@ -1,0 +1,26 @@
+﻿@model BartenderApp.Models.Drink 
+
+@{
+    ViewData["Title"] = "Drinks Menu";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Drinks Menu</h1>
+
+</div>
+ 
+<div class="text-center">
+    <form asp-action="AddDrink" method="post">
+        <label asp-for="CustomerName">Name:</label>
+        <input asp-for="CustomerName" /><br />
+        <input asp-for="DrinkName" type="radio" value="Health Potion" />
+        <label asp-for="DrinkName">Health Potion</label><br />
+        <input asp-for="DrinkName" type="radio" value="Mana Potion" />
+        <label asp-for="DrinkName">Mana Potion</label><br />
+        <input asp-for="DrinkName" type="radio" value="Ether" />
+        <label asp-for="DrinkName">Ether</label><br />
+        <input asp-for="DrinkName" type="radio" value="Elixer" />
+        <label asp-for="DrinkName">Elixer</label><br />
+        <input asp-action="Order" type="submit" value="Place Order" class="btn-primary"/>
+    </form>
+</div>

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<BartenderApp.Models.Drink>
+@{
+    ViewData["Title"] = "Drinks Queue";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Drinks Queue</h1>
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DrinkName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerName)
+            </th>
+            <th></th>
+        </tr>
+        <!-- removed ats
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    Html.DisplayFor(modelItem => item.DrinkName)
+                </td>
+                <td>
+                    Html.DisplayFor(modelItem => item.CustomerName)
+                </td>
+                <td>
+
+                </td>
+            </tr>
+        }
+            -->
+        
+    </table>
+
+</div>
